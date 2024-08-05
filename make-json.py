@@ -132,5 +132,5 @@ with open("./public/directory-prereqs.json", "w", encoding="utf8") as prereqs_fi
     json.dump(directory_prereqs, prereqs_file)
 
 print(
-    "./public/{hiearchy.json,hidden_hierarchy.json,directory-prereqs.json} created in your current working directory."
+    "./public/{mfile-layout.json,mfile-hidden-layout.json,directory-prereqs.json} created in your current working directory."
 )
