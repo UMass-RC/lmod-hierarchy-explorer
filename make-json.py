@@ -122,10 +122,10 @@ for _dict in [modules, hidden_modules]:
         for parent_dir, names in parent_dir2name.items():
             _dict[arch][parent_dir] = sorted(names)
 
-with open("./public/hierarchy.json", "w", encoding="utf8") as json_out_file:
+with open("./public/mfile-layout.json", "w", encoding="utf8") as json_out_file:
     json.dump(modules, json_out_file)
 
-with open("./public/hidden-hierarchy.json", "w", encoding="utf8") as json_out_file:
+with open("./public/mfile-hidden-layout.json", "w", encoding="utf8") as json_out_file:
     json.dump(hidden_modules, json_out_file)
 
 with open("./public/directory-prereqs.json", "w", encoding="utf8") as prereqs_file:
