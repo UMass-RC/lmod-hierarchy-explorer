@@ -128,6 +128,14 @@ function filter_jsonTrees(substr) {
     return;
   }
 
+  // if the only results are hidden modules section, make sure that section is visible
+  if (
+    ModuleTreeHelpers.is_empty(new_ModuleTree) &&
+    !ModuleTreeHelpers.is_empty(new_ModuleTree_hiddden)
+  ) {
+    set_checkbox(SHOW_HIDDEN_CHECKBOX, true);
+  }
+
   // make sure any previously selected modules are still present after filtering
   const [selected_ModuleTree, selected_hidden_ModuleTree] = get_selected_ModuleTrees();
   ModuleTreeHelpers.update(new_ModuleTree, selected_ModuleTree);
@@ -159,14 +167,6 @@ function filter_jsonTrees(substr) {
   } else {
     // always expand after filtering
     set_checkbox(EXPAND_COLLAPSE_CHECKBOX, true);
-  }
-
-  // if the only results are hidden modules section, make sure that section is visible
-  if (
-    ModuleTreeHelpers.is_empty(new_ModuleTree) &&
-    !ModuleTreeHelpers.is_empty(new_ModuleTree_hiddden)
-  ) {
-    set_checkbox(SHOW_HIDDEN_CHECKBOX, true);
   }
 }
 
