@@ -41,6 +41,7 @@ html * {
   margin-right: auto;
   margin-left: auto;
   max-width: 920px;
+  min-height: 90vh; /* make sure footer is at the bottom of the page */
 }
 body div.content {
   flex: 1 0 auto;
