@@ -11,10 +11,15 @@
     For information on using modules, read the
     <a href="https://docs.unity.rc.umass.edu/documentation/software/modules">
       documentation on Environment Modules</a
-    >.
-    <br />
-    Click the elements to expand/collapse each category. All nodes in the general partitions are
-    x86_64 architecture and use that category of module. If you're having trouble navigating the
-    module hierarchy, ask the
+    >. For help with using modules, ask the
     <a href="https://unity.rc.umass.edu/community-slack">Slack helpdesk</a>.
+    <br />
+    You can click the directories to expand/collapse the listings. You can click the modules to
+    select them. A command will be generated which you can copy/paste into your terminal to load the
+    selected modules. If the selected modules are incompatible or otherwise invalid, the command
+    output window should say so. Some modules are meant for specific types of nodes: cuda modules
+    for GPU nodes, ARM modules for ARM nodes, etc. Since the generated command is run on a non-GPU
+    x86_64 node, there may be warning messages saying that the modules are being loaded on the wrong
+    type of node, but that just means that you should be sure to run your command on the right type
+    of node.
   </p>
