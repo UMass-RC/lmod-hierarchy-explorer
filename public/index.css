@@ -26,7 +26,7 @@
   margin-bottom: 20px;
 }
 
-.jsontree_leaf-nodes .jsontree_node {
+.jsontree_leaf-nodes .jsontree_node .jsontree_value-wrapper {
   cursor: pointer;
 }
 
