@@ -5,3 +5,4 @@ public/mfile-layout.json
 public/mfile-hidden-layout.json
 public/directory-prereqs.json
 old
+.DS_Store
