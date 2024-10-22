@@ -1,6 +1,6 @@
 {
   "noarch": "/modules/modulefiles/noarch",
-  "x86_64": "/modules/modulefiles/x86_64:/modules/spack_modulefiles/linux-ubuntu20.04-x86_64/Core",
-  "aarch64": "/modules/modulefiles/aarch64:/modules/spack_modulefiles/linux-ubuntu20.04-aarch64/Core",
-  "ppc64le": "/modules/modulefiles/ppc64le:/modules/spack_modulefiles/linux-ubuntu20.04-ppc64le/Core"
+  "x86_64": "/modules/modulefiles/spack/latest/linux-ubuntu24.04-x86_64/Core:/modules/modulefiles/linux-ubuntu24.04-x86_64",
+  "aarch64": "/modules/modulefiles/spack/latest/linux-ubuntu24.04-aarch64/Core:/modules/modulefiles/linux-ubuntu24.04-aarch64",
+  "ppc64le": "/modules/modulefiles/spack/latest/linux-ubuntu24.04-ppc64le/Core:/modules/modulefiles/linux-ubuntu24.04-ppc64le"
 }
