@@ -14,7 +14,7 @@ with open("./public/arch2modulepath.json", "r", encoding="utf8") as f:
 # Lmod spider does not give the hidden property to the modules in that new branch
 HIDDEN_PARENT_DIRS = ["/modules/uri_modulefiles/all", "/modules/uri_modulefiles"]
 
-VERSION_BLACKLIST = ["latest", "default"]
+VERSION_BLACKLIST = []
 
 
 def readlink_recursive(path):
