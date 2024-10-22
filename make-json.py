@@ -16,26 +16,14 @@ HIDDEN_PARENT_DIRS = ["/modules/uri_modulefiles/all", "/modules/uri_modulefiles"
 
 VERSION_BLACKLIST = []
 
-
-def readlink_recursive(path):
-    if os.path.dirname(path) == path:  # root
-        return path
-    if not os.path.isabs(path):
-        path = os.path.abspath(path)
-    while os.path.islink(path):
-        path = os.readlink(path)
-        if not os.path.isabs(path):
-            path = os.path.abspath(path)
-    return os.path.join(readlink_recursive(os.path.dirname(path)), os.path.basename(path))
-
-
 # spack generated modules add new directories to MODULEPATH using their absolute paths
 # put the symlink into those absolute paths by finding/replacing
-PATH_REPLACEMENTS = {readlink_recursive("/modules/spack_modulefiles"): "/modules/spack_modulefiles"}
+#PATH_REPLACEMENTS = {readlink_recursive("/modules/spack_modulefiles"): "/modules/spack_modulefiles"}
+PATH_REPLACEMENTS = {}
 
 
 def do_path_replacements(x):
-    x = readlink_recursive(x)
+    x = os.path.realpath(x)
     for find_this, replace_with_this in PATH_REPLACEMENTS.items():
         if x.startswith(find_this):
             # strip off leading characters, then prepend replacement
