@@ -108,9 +108,10 @@ function send_module_load(req, res) {
     `export LMOD_DISABLE_SAME_NAME_AUTOSWAP=yes; ` +
     "module load " +
     shellQuote.quote(modules);
-  const bash_command = `env -i bash -c ${shellQuote.quote([setup_and_module_command])} 2>&1`;
+  const bash_cmd = shellQuote.quote([setup_and_module_command]);
+  const env_cmd = `env -i PATH="$PATH" USER="$USER" HOME="$HOME" bash -c ${bash_cmd} 2>&1`;
   try {
-    const proc = spawn(bash_command, {
+    const proc = spawn(env_cmd, {
       encoding: "utf-8",
       shell: true,
     });
